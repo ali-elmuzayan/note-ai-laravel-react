@@ -22,10 +22,10 @@ class NoteController extends Controller
         $notes = $request->user()->notes()->latest()->paginate(10); 
 
         // check the length if less than 1 return no notes yet 
-        if ($notes->count() < 1) return response()->json("no notes yet"); 
+        if ($notes->count() < 1) return $this->success([], "No notes yet", 200, ['total' => 0]);
 
 
-        return response()->json($notes);
+        return $this->success($notes, "Notes retrieved successfully");
     }
     
 

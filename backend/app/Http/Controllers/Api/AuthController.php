@@ -49,7 +49,7 @@ class AuthController extends Controller
         // 02) Return the token to the client
          return response()->json([
             'message' => 'Login Successfully',
-            'access_token' => $token,
+            'token' => $token,
             'token_type' => 'Bearer',
         ]);
 
