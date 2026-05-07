@@ -19,6 +19,11 @@ export const createApp = () => {
         origin: process.env.CLIENT_URL,
         credentials: true,
     }));
+    app.use((req, res, next) => {
+        console.log(`${req.method} -----${req.path}`);
+        next();
+    });
+
 
 
     // --- Routes ---------------------------------------
