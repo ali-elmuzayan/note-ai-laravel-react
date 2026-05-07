@@ -1,1 +1,6 @@
 backend-node
+node_modules
+dist
+.env
+*.log
+*.tmp
