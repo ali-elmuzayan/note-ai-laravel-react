@@ -6,6 +6,7 @@ import AppLayout from "./layouts/AppLayout";
 import AuthGuard from "./components/AuthGuard";
 import AuthLayout from "./layouts/AuthLayout";
 import Home from "./pages/Home";
+import Notes from "./pages/app/Notes";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -21,6 +22,8 @@ createRoot(document.getElementById("root")!).render(
         <Route element={<AuthGuard />}>
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />} />
+            <Route path="/notes" element={<Notes />} />
+            <Route path="/notes/:id" element={<div>Note</div>} />
           </Route>
         </Route>
 

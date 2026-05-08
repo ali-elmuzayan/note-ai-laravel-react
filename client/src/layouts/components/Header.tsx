@@ -3,9 +3,11 @@ import { LogOut, Sparkles } from "lucide-react";
 import { Link, NavLink } from "react-router";
 
 const navLinks = [
-  { to: "/", label: "Notes", end: true },
-  { to: "/favorites", label: "Favorites" },
-  { to: "/archive", label: "Archive" },
+  { to: "/", label: "Dashboard", end: true },
+  { to: "/notes", label: "Notes" },
+  { to: "/tasks", label: "Tasks" },
+  { to: "/projects", label: "Projects" },
+  { to: "/pomodoro", label: "Pomodoro" },
 ];
 
 const Header = () => {
