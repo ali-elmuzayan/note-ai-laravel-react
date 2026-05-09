@@ -1,28 +1,59 @@
-import mongoose, {Schema } from "mongoose";
+import { DataTypes, Model, Optional } from "sequelize";
+import { sequelize } from "../db/sequelize";
 
-
-interface IUser {
-    name: string;
-    email: string;
-    clerkId: string;
+interface UserAttributes {
+  id: string;
+  name: string;
+  email: string;
+  clerkId: string;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
+interface UserCreationAttributes extends Optional<
+  UserAttributes,
+  "id" | "createdAt" | "updatedAt"
+> {}
 
-const userSchema = new Schema({
+export class User
+  extends Model<UserAttributes, UserCreationAttributes>
+  implements UserAttributes
+{
+  declare id: string;
+  declare name: string;
+  declare email: string;
+  declare clerkId: string;
+  declare createdAt: Date;
+  declare updatedAt: Date;
+}
+
+User.init(
+  {
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+    },
     name: {
-        type: String, 
-        required: true, 
-    }, 
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     email: {
-        type: String, 
-        required: true, 
-    }, 
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
     clerkId: {
-        type: String, 
-        required: true, 
-    }
-}, {
-    timestamps: true
-})
-
-export const User = mongoose.model<IUser>('User', userSchema)
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      field: "clerk_id",
+    },
+  },
+  {
+    sequelize,
+    tableName: "users",
+    underscored: true,
+    timestamps: true,
+  },
+);
