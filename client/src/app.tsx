@@ -4,14 +4,16 @@ import AuthGuard from "./components/AuthGuard";
 import AppLayout from "./layouts/AppLayout";
 import Home from "./pages/Home";
 import Notes from "./pages/app/Notes";
+import SignIn from "./pages/Auth/SignIn";
+import SignUp from "./pages/Auth/SignUp";
 
 const App = () => {
   return (
     <Routes>
       {/* Auth Routes */}
       <Route element={<AuthLayout />}>
-        <Route path="/login" element={<div>Login</div>} />
-        <Route path="/register" element={<div>Register</div>} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Route>
 
       {/* The Application With Protected routes  */}
