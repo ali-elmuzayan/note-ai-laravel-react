@@ -3,7 +3,10 @@ export type Note = {
   title: string;
   content: string;
   tags: string[];
-  updatedAt: string; // ISO date
+  summary?: string;
+  userId: string;
+  createdAt: Date;
+  updatedAt: Date;
 };
 
 export type TaskPriority = "low" | "medium" | "high";

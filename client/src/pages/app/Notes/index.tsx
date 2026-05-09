@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Search, StickyNote, X } from "lucide-react";
-import { demoNotes } from "@/lib/demoNotes";
+import { demoNotes } from "@/data/demoNotes";
 import GlassCard from "@/components/common/GlassCard";
 import NotesList from "@/components/NotesList";
 

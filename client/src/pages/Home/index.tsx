@@ -13,10 +13,10 @@ import {
 } from "lucide-react";
 import GlassCard from "@/components/common/GlassCard";
 import { Button } from "@/components/ui/button";
-import { demoNotes } from "@/lib/demoNotes";
-import { demoTasks } from "@/lib/demoTasks";
-import { demoProjects } from "@/lib/demoProjects";
-import { demoPomodoro } from "@/lib/demoPomodoro";
+import { demoNotes } from "@/data/demoNotes";
+import { demoTasks } from "@/data/demoTasks";
+import { demoProjects } from "@/data/demoProjects";
+import { demoPomodoro } from "@/data/demoPomodoro";
 import { formatDate } from "@/lib/helper";
 import type { Task } from "@/types";
 

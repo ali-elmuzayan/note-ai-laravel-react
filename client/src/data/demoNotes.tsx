@@ -7,7 +7,10 @@ export const demoNotes: Note[] = [
     content:
       "This is your first note. Start by creating, editing, or searching your notes from this dashboard.",
     tags: ["intro", "getting-started"],
-    updatedAt: "2026-05-01T10:15:00.000Z",
+    summary: "A welcome note introducing the Note AI dashboard.",
+    userId: "demo-user",
+    createdAt: new Date("2026-05-01T09:45:00.000Z"),
+    updatedAt: new Date("2026-05-01T10:15:00.000Z"),
   },
   {
     id: "n2",
@@ -15,7 +18,10 @@ export const demoNotes: Note[] = [
     content:
       "1. AI-powered note summarizer\n2. Smart tag suggestions\n3. Voice-to-note transcription",
     tags: ["ideas", "ai"],
-    updatedAt: "2026-05-03T08:45:00.000Z",
+    summary: "A list of AI-focused project ideas for the app.",
+    userId: "demo-user",
+    createdAt: new Date("2026-05-03T08:15:00.000Z"),
+    updatedAt: new Date("2026-05-03T08:45:00.000Z"),
   },
   {
     id: "n3",
@@ -23,7 +29,10 @@ export const demoNotes: Note[] = [
     content:
       "Designing Data-Intensive Applications, Clean Architecture, The Pragmatic Programmer.",
     tags: ["books", "learning"],
-    updatedAt: "2026-04-28T19:22:00.000Z",
+    summary: "A short reading list of software engineering books.",
+    userId: "demo-user",
+    createdAt: new Date("2026-04-28T18:50:00.000Z"),
+    updatedAt: new Date("2026-04-28T19:22:00.000Z"),
   },
   {
     id: "n4",
@@ -31,14 +40,20 @@ export const demoNotes: Note[] = [
     content:
       "Yesterday: ...\nToday: ...\nBlockers: ...\nNotes: keep it short and actionable.",
     tags: ["work", "template"],
-    updatedAt: "2026-05-05T07:00:00.000Z",
+    summary: "A concise template for daily standup updates.",
+    userId: "demo-user",
+    createdAt: new Date("2026-05-05T06:30:00.000Z"),
+    updatedAt: new Date("2026-05-05T07:00:00.000Z"),
   },
   {
     id: "n5",
     title: "Grocery shopping",
     content: "Milk, eggs, bread, olive oil, tomatoes, spinach, chicken, rice.",
     tags: ["personal", "shopping"],
-    updatedAt: "2026-05-06T17:30:00.000Z",
+    summary: "A personal grocery shopping checklist.",
+    userId: "demo-user",
+    createdAt: new Date("2026-05-06T17:00:00.000Z"),
+    updatedAt: new Date("2026-05-06T17:30:00.000Z"),
   },
   {
     id: "n6",
@@ -46,7 +61,10 @@ export const demoNotes: Note[] = [
     content:
       "Use @theme to define design tokens. shadcn/ui works with the new tokens via CSS variables.",
     tags: ["dev", "tailwind", "ui"],
-    updatedAt: "2026-05-07T12:10:00.000Z",
+    summary: "Notes about Tailwind v4 theme tokens and shadcn/ui.",
+    userId: "demo-user",
+    createdAt: new Date("2026-05-07T11:35:00.000Z"),
+    updatedAt: new Date("2026-05-07T12:10:00.000Z"),
   },
   {
     id: "n7",
@@ -54,7 +72,10 @@ export const demoNotes: Note[] = [
     content:
       "Pack light. Visit the library, stay near the corniche, try seafood at sunset.",
     tags: ["travel", "personal"],
-    updatedAt: "2026-04-22T14:05:00.000Z",
+    summary: "Travel reminders for a trip to Alexandria.",
+    userId: "demo-user",
+    createdAt: new Date("2026-04-22T13:20:00.000Z"),
+    updatedAt: new Date("2026-04-22T14:05:00.000Z"),
   },
   {
     id: "n8",
@@ -62,6 +83,9 @@ export const demoNotes: Note[] = [
     content:
       "Discuss API contract for notes service, search indexing strategy, and pagination.",
     tags: ["work", "meeting"],
-    updatedAt: "2026-05-08T09:00:00.000Z",
+    summary: "Meeting agenda for notes API and search planning.",
+    userId: "demo-user",
+    createdAt: new Date("2026-05-08T08:30:00.000Z"),
+    updatedAt: new Date("2026-05-08T09:00:00.000Z"),
   },
 ];
