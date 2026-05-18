@@ -2,35 +2,33 @@ import { Request, Response, Router } from "express";
 
 const router = Router();
 
-router.post("/login", );
-
-router.post('/register', (req: Request, res: Response) => {
-    res.json({ message: 'Register' });
+router.post("/login", (req: Request, res: Response) => {
+  res.json({ message: "Login" });
 });
 
-
-router.post('/logout', (req: Request, res: Response) => {
-    res.json({ message: 'Logout' });
+router.post("/register", (req: Request, res: Response) => {
+  res.json({ message: "Register" });
 });
 
-router.post('/refresh', (req: Request, res: Response) => {
-    res.json({ message: 'Refresh' });
+router.post("/logout", (req: Request, res: Response) => {
+  res.json({ message: "Logout" });
 });
 
-router.get('/me', (req: Request, res: Response) => {
-    res.json({ message: 'Me' });
+router.post("/refresh", (req: Request, res: Response) => {
+  res.json({ message: "Refresh" });
 });
 
+router.get("/me", (req: Request, res: Response) => {
+  res.json({ message: "Me" });
+});
 
 // --- For forgetten Password:  ----------------------
-router.post('/forgot-password', (req: Request, res: Response) => {
-    res.json({ message: 'Forgot Password' });
+router.post("/forgot-password", (req: Request, res: Response) => {
+  res.json({ message: "Forgot Password" });
 });
 
-router.post('/reset-password', (req: Request, res: Response) => {
-    res.json({ message: 'Reset Password' });
+router.post("/reset-password", (req: Request, res: Response) => {
+  res.json({ message: "Reset Password" });
 });
-
-
 
 export default router;

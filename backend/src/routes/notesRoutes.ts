@@ -1,9 +1,8 @@
-import { Request, Response, Router } from "express";
+import { Router } from "express";
+import { deleteNote } from "../controller/noteController";
 
 const router = Router();
 
-router.get("/", (req: Request, res: Response) => {
-    res.json({ message: "Get notes" });
-});
+router.delete("/:id", deleteNote);
 
 export default router;
