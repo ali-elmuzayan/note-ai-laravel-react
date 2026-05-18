@@ -1,4 +1,4 @@
-import type { Note } from "@/lib/demoNotes";
+import type { Note } from "@/types";
 import { GlassCard } from "./common/GlassCard";
 import { formatDate } from "@/lib/helper";
 
@@ -15,7 +15,7 @@ const NoteCard = ({ note }: { note: Note }) => (
     </p>
     {note.tags.length > 0 && (
       <div className="flex flex-wrap gap-1.5 pt-1">
-        {note.tags.map((tag) => (
+        {note.tags.map((tag: string) => (
           <span
             key={tag}
             className="text-xs px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground"
