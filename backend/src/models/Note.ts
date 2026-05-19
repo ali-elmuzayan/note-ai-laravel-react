@@ -56,7 +56,7 @@ Note.init(
       allowNull: true,
     },
     tags: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.JSON,
       allowNull: true,
       defaultValue: [],
     },
