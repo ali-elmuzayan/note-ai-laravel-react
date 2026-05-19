@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import {  Route, Routes } from "react-router";
 import AuthLayout from "./layouts/AuthLayout";
 import AuthGuard from "./components/AuthGuard";
 import AppLayout from "./layouts/AppLayout";
@@ -10,18 +10,21 @@ import SignUp from "./pages/Auth/SignUp";
 const App = () => {
   return (
     <Routes>
+      {/* Landing Page */}
+      <Route path="/" element={<Home />} />
+
       {/* Auth Routes */}
       <Route element={<AuthLayout />}>
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Route>
 
       {/* The Application With Protected routes  */}
       <Route element={<AuthGuard />}>
-        <Route path="/" element={<AppLayout />}>
-          <Route index element={<Home />} />
-          <Route path="/notes" element={<Notes />} />
-          <Route path="/notes/:id" element={<div>Note</div>} />
+        <Route path="/dashboard" element={<AppLayout />}>
+          <Route index element={<App />} />
+          <Route path="notes" element={<Notes />} />
+          <Route path="notes/:id" element={<div>Note</div>} />
         </Route>
       </Route>
 
