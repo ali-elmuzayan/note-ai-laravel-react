@@ -1,4 +1,4 @@
-import {  Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import AuthLayout from "./layouts/AuthLayout";
 import AuthGuard from "./components/AuthGuard";
 import AppLayout from "./layouts/AppLayout";
@@ -8,6 +8,9 @@ import SignUp from "./pages/Auth/SignUp";
 // import Tasks from "./pages/dashboard/Tasks";
 import Notes from "./pages/Dashboard/Notes";
 import Dashboard from "./pages/Dashboard";
+import Pomodoro from "./pages/Dashboard/Pomodoro";
+import Projects from "./pages/Dashboard/Projects";
+import ProjectDetail from "./pages/Dashboard/Projects/ProjectDetail";
 
 const App = () => {
   return (
@@ -27,6 +30,9 @@ const App = () => {
           <Route index element={<Dashboard />} />
           <Route path="/dashboard/notes" element={<Notes />} />
           <Route path="/dashboard/notes/:id" element={<div>Note</div>} />
+          <Route path="/dashboard/pomodoro" element={<Pomodoro />} />
+          <Route path="/dashboard/projects" element={<Projects />} />
+          <Route path="/dashboard/projects/:id" element={<ProjectDetail />} />
         </Route>
       </Route>
 
