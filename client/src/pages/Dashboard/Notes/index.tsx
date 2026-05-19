@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import { demoNotes } from "@/data/demoNotes";
 import GlassCard from "@/components/common/GlassCard";
 import NotesList from "@/components/NotesList";
 import SearchBar from "@/components/notes/SearchBar";
