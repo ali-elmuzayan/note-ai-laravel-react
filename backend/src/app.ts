@@ -1,42 +1,34 @@
-import express from "express"; 
-import cookieParser from "cookie-parser";
-import cors from "cors";
-import authRouter from "./routes/authRoutes";
-import notesRouter from "./routes/notesRoutes";
-import aiRouter from "./routes/aiRoutes";
-import healthRouter from "./routes/healthRoutes";
-import { globalErrorHandler } from "./middleware/errorHandler";
+import express, { Express } from 'express';
+import cors from 'cors';
+import { clerkMiddleware } from '@clerk/express';
+import { config } from './config/env';
+import { errorHandler } from './middlewares/errorHandler';
+import healthRouter from './routes/health';
+import authTestRouter from './routes/auth-test';
+import notesRouter from './routes/notes';
+import aiRouter from './routes/ai';
 
-export const createApp = () => {
-    const app = express(); 
+export function createApp(): Express {
+  const app = express();
 
+  // Middleware
+  app.use(cors({
+    origin: config.frontendOrigin,
+    credentials: true,
+  }));
+  app.use(express.json());
+  
+  // Clerk authentication middleware
+  app.use(clerkMiddleware());
 
+  // Routes
+  app.use('/', healthRouter);
+  app.use('/api/auth', authTestRouter); // Test auth endpoint
+  app.use('/api/notes', notesRouter);
+  app.use('/api/ai', aiRouter);
 
-    // --- Middleware -------------------------------------
-    app.use(express.json());
-    app.use(cookieParser());
-    app.use(cors({
-        origin: process.env.CLIENT_URL,
-        credentials: true,
-    }));
-    app.use((req, res, next) => {
-        console.log(`${req.method} -----${req.path}`);
-        next();
-    });
+  // Error handling (must be last)
+  app.use(errorHandler);
 
-
-
-    // --- Routes ---------------------------------------
-     app.use('/api/v1/auth', authRouter); 
-     app.use('/api/v1/notes', notesRouter);
-     app.use('/api/v1/ai', aiRouter); 
-     app.use('/api/v1/', healthRouter);
-    
-
-
-    // --- Handle Errors --------------------------------
-    app.use(globalErrorHandler);
-
-
-    return app; 
+  return app;
 }

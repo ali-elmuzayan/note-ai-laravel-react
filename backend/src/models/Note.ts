@@ -1,34 +1,26 @@
-import { DataTypes, Model, Optional } from "sequelize";
-import { sequelize } from "../db/sequelize";
+import { DataTypes, Model, Optional } from 'sequelize';
+import { sequelize } from '../db/sequelize';
 
 interface NoteAttributes {
   id: string;
   userId: string;
   title: string;
   content: string;
-  summary: string;
-  tags: string[];
+  summary: string | null;
   createdAt?: Date;
   updatedAt?: Date;
 }
 
-interface NoteCreationAttributes extends Optional<
-  NoteAttributes,
-  "id" | "summary" | "tags" | "createdAt" | "updatedAt"
-> {}
+interface NoteCreationAttributes extends Optional<NoteAttributes, 'id' | 'summary' | 'createdAt' | 'updatedAt'> {}
 
-export class Note
-  extends Model<NoteAttributes, NoteCreationAttributes>
-  implements NoteAttributes
-{
+export class Note extends Model<NoteAttributes, NoteCreationAttributes> implements NoteAttributes {
   declare id: string;
   declare userId: string;
   declare title: string;
   declare content: string;
-  declare summary: string;
-  declare tags: string[];
-  declare createdAt: Date;
-  declare updatedAt: Date;
+  declare summary: string | null;
+  declare readonly createdAt: Date;
+  declare readonly updatedAt: Date;
 }
 
 Note.init(
@@ -41,7 +33,7 @@ Note.init(
     userId: {
       type: DataTypes.STRING,
       allowNull: false,
-      field: "user_id",
+      field: 'user_id',
     },
     title: {
       type: DataTypes.STRING,
@@ -55,16 +47,11 @@ Note.init(
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    tags: {
-      type: DataTypes.JSON,
-      allowNull: true,
-      defaultValue: [],
-    },
   },
   {
     sequelize,
-    tableName: "notes",
+    tableName: 'notes',
     underscored: true,
     timestamps: true,
-  },
+  }
 );
