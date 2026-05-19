@@ -21,7 +21,7 @@ import TaskRow from "@/components/common/TaskRow";
 const userName = "Ali";
 
 
-const App = () => {
+const Dashboard = () => {
 
 
   const openTasks = demoTasks.filter((t) => t.status !== "done");
@@ -266,4 +266,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Dashboard;

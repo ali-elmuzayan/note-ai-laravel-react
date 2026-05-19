@@ -4,15 +4,15 @@ import { Link, NavLink } from "react-router";
 
 const navLinks = [
   { to: "/", label: "Dashboard", end: true },
-  { to: "/notes", label: "Notes" },
-  { to: "/tasks", label: "Tasks" },
-  { to: "/projects", label: "Projects" },
-  { to: "/pomodoro", label: "Pomodoro" },
+  { to: "/dashboard/notes", label: "Notes" },
+  { to: "/dashboard/tasks", label: "Tasks" },
+  { to: "/dashboard/projects", label: "Projects" },
+  { to: "/dashboard/pomodoro", label: "Pomodoro" },
 ];
 
 const Header = () => {
   return (
-    <header className="w-full sticky top-0 z-50 py-4 px-4">
+    <header className="w-full sticky top-0 z-50 py-4 px-4 mb-4">
       <div className=" max-w-6xl mx-auto ">
         {/* glass card */}
         <div className="glass-card h-16 flex-between pl-4 pr-2 sm:pl-6 sm:pr-4">

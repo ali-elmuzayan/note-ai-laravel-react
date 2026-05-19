@@ -3,9 +3,11 @@ import AuthLayout from "./layouts/AuthLayout";
 import AuthGuard from "./components/AuthGuard";
 import AppLayout from "./layouts/AppLayout";
 import Home from "./pages/Home";
-import Notes from "./pages/app/Notes";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
+// import Tasks from "./pages/dashboard/Tasks";
+import Notes from "./pages/Dashboard/Notes";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
@@ -22,14 +24,14 @@ const App = () => {
       {/* The Application With Protected routes  */}
       <Route element={<AuthGuard />}>
         <Route path="/dashboard" element={<AppLayout />}>
-          <Route index element={<App />} />
-          <Route path="notes" element={<Notes />} />
-          <Route path="notes/:id" element={<div>Note</div>} />
+          <Route index element={<Dashboard />} />
+          <Route path="/dashboard/notes" element={<Notes />} />
+          <Route path="/dashboard/notes/:id" element={<div>Note</div>} />
         </Route>
       </Route>
 
       {/* Not Found Route */}
-      <Route path="*" element={<div>Not Found</div>} />
+      {/* <Route path="*" element={<div>Not Found</div>} /> */}
     </Routes>
   );
 };
