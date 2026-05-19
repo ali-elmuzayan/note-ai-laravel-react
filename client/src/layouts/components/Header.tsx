@@ -3,7 +3,7 @@ import { LogOut, Sparkles } from "lucide-react";
 import { Link, NavLink } from "react-router";
 
 const navLinks = [
-  { to: "/", label: "Dashboard", end: true },
+  { to: "/dashboard", label: "Dashboard", end: true },
   { to: "/dashboard/notes", label: "Notes" },
   { to: "/dashboard/tasks", label: "Tasks" },
   { to: "/dashboard/projects", label: "Projects" },
