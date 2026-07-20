@@ -1,6 +1,7 @@
 import type { Task } from "@/types";
 
 export const demoTasks: Task[] = [
+  // p1 — HRMs Platform
   {
     id: "t1",
     title: "Finalize Q2 OKRs",
@@ -10,6 +11,48 @@ export const demoTasks: Task[] = [
     projectId: "p1",
   },
   {
+    id: "t3",
+    title: "Design onboarding flow",
+    status: "in-progress",
+    priority: "high",
+    dueDate: "2026-05-10T16:00:00.000Z",
+    projectId: "p1",
+  },
+  {
+    id: "t7",
+    title: "Set up database schema",
+    status: "done",
+    priority: "high",
+    dueDate: "2026-05-05T12:00:00.000Z",
+    projectId: "p1",
+  },
+  {
+    id: "t8",
+    title: "Build payroll calculation module",
+    status: "todo",
+    priority: "high",
+    dueDate: "2026-05-20T16:00:00.000Z",
+    projectId: "p1",
+  },
+  {
+    id: "t9",
+    title: "Write unit tests for auth",
+    status: "todo",
+    priority: "medium",
+    dueDate: "2026-05-22T10:00:00.000Z",
+    projectId: "p1",
+  },
+  {
+    id: "t10",
+    title: "Employee dashboard UI",
+    status: "done",
+    priority: "medium",
+    dueDate: "2026-05-06T18:00:00.000Z",
+    projectId: "p1",
+  },
+
+  // p2 — Note AI
+  {
     id: "t2",
     title: "Review pull request #142",
     status: "todo",
@@ -18,27 +61,105 @@ export const demoTasks: Task[] = [
     projectId: "p2",
   },
   {
-    id: "t3",
-    title: "Design HRMs onboarding flow",
-    status: "in-progress",
-    priority: "high",
-    dueDate: "2026-05-10T16:00:00.000Z",
-    projectId: "p1",
-  },
-  {
-    id: "t4",
-    title: "Write blog post draft",
-    status: "todo",
-    priority: "low",
-    dueDate: "2026-05-12T10:00:00.000Z",
-  },
-  {
     id: "t5",
     title: "Refactor auth middleware",
     status: "done",
     priority: "medium",
     dueDate: "2026-05-07T18:00:00.000Z",
     projectId: "p2",
+  },
+  {
+    id: "t11",
+    title: "Implement AI summarization",
+    status: "in-progress",
+    priority: "high",
+    dueDate: "2026-05-15T14:00:00.000Z",
+    projectId: "p2",
+  },
+  {
+    id: "t12",
+    title: "Design note editor UI",
+    status: "done",
+    priority: "low",
+    dueDate: "2026-05-04T10:00:00.000Z",
+    projectId: "p2",
+  },
+  {
+    id: "t13",
+    title: "Add tag filtering",
+    status: "todo",
+    priority: "low",
+    dueDate: "2026-05-18T10:00:00.000Z",
+    projectId: "p2",
+  },
+
+  // p3 — Portfolio v3
+  {
+    id: "t14",
+    title: "Create wireframes",
+    status: "done",
+    priority: "medium",
+    dueDate: "2026-05-03T10:00:00.000Z",
+    projectId: "p3",
+  },
+  {
+    id: "t15",
+    title: "Write case studies",
+    status: "todo",
+    priority: "low",
+    dueDate: "2026-05-25T10:00:00.000Z",
+    projectId: "p3",
+  },
+  {
+    id: "t16",
+    title: "Set up Next.js project",
+    status: "in-progress",
+    priority: "medium",
+    dueDate: "2026-05-12T12:00:00.000Z",
+    projectId: "p3",
+  },
+
+  // p4 — Marketing site
+  {
+    id: "t17",
+    title: "Write landing page copy",
+    status: "done",
+    priority: "high",
+    dueDate: "2026-04-28T10:00:00.000Z",
+    projectId: "p4",
+  },
+  {
+    id: "t18",
+    title: "Design hero section",
+    status: "done",
+    priority: "medium",
+    dueDate: "2026-04-30T12:00:00.000Z",
+    projectId: "p4",
+  },
+  {
+    id: "t19",
+    title: "SEO optimisation",
+    status: "done",
+    priority: "low",
+    dueDate: "2026-05-02T10:00:00.000Z",
+    projectId: "p4",
+  },
+  {
+    id: "t20",
+    title: "Set up analytics",
+    status: "done",
+    priority: "low",
+    dueDate: "2026-05-03T10:00:00.000Z",
+    projectId: "p4",
+  },
+
+  // unlinked
+  {
+    id: "t4",
+    title: "Write blog post draft",
+    status: "todo",
+    priority: "low",
+    dueDate: "2026-05-12T10:00:00.000Z",
   },
   {
     id: "t6",
