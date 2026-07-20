@@ -5,7 +5,7 @@ import AppLayout from "./layouts/AppLayout";
 import Home from "./pages/Home";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
-// import Tasks from "./pages/dashboard/Tasks";
+import Tasks from "./pages/Dashboard/Tasks";
 import Notes from "./pages/Dashboard/Notes";
 import Dashboard from "./pages/Dashboard";
 import Pomodoro from "./pages/Dashboard/Pomodoro";
@@ -30,6 +30,7 @@ const App = () => {
           <Route index element={<Dashboard />} />
           <Route path="/dashboard/notes" element={<Notes />} />
           <Route path="/dashboard/notes/:id" element={<div>Note</div>} />
+          <Route path="/dashboard/tasks" element={<Tasks />} />
           <Route path="/dashboard/pomodoro" element={<Pomodoro />} />
           <Route path="/dashboard/projects" element={<Projects />} />
           <Route path="/dashboard/projects/:id" element={<ProjectDetail />} />
